@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		*
+		{
+			margin: 0px;
+		}
+		div
+		{
+			text-align: center;
+			margin: 200px auto;
+			border-radius: 10px;
+			box-shadow: 20px 10px whitesmoke;
+			width: 500px;
+			height: 300px;
+			border-style: solid;
+			border-width: 2px;
+			position: relative;
+			overflow:hidden ;
+			/*display: inline-block;*/
+		}
+		div>img
+		{
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
+			filter: grayscale(100%);
+			transition: all 1s linear 0s;
+		}
+		div>#content
+		{
+			background-color: rgba(0, 0, 0, 0.3);
+			color: white;
+			padding: 5px;
+			text-align: center;
+			position: absolute;
+			margin: 0px;
+			top: 0px;
+			left: 0px;
+
+			transform: translateY(100%);
+			transition: all 1s linear 0s;
+		}
+		div:hover
+		{
+			cursor: pointer;
+		}
+		div:hover>img
+		{
+			filter: grayscale(0%);
+		}
+		div:hover>#content
+		{
+			transform: translateY(0%);
+		}
+
+	</style>
+</head>
+<body>
+    <div id="parent">
+		<img src="{% static 'images/Ritesh.jpg' %}" width="200" height="100"  alt="image not found">
+		<div id="content"
+		<h1><b>Ritesh Deshmukha</b></h1>
+		<p>
+			Ritesh Deshmukh made his Hindi film debut with the 2003 romance, Tujhe Meri Kasam opposite Genelia D'Souza.[2] He later appeared in Out of Control.[3] In his third film, Masti, a comic thriller, his role was widely disparaged. Regardless, the film performed well at the box office. He gained fame after his performance in Masti, which earned him two minor awards. He subsequently appeared Bardaasht and Naach, both of them being box-office duds.
+		</p>
+		<button>Leran more</button>
+		</div>
+	</div>
+    
+</body>
+</html>
